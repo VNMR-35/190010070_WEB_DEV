@@ -1,0 +1,65 @@
+html
+{
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+h1, h2
+{
+    font-family: 'Times New Roman', Times, Palatino, Bookman, 'New Century Schoolbook', serif;
+    text-shadow: 2px 2px 5px red;
+}
+
+#profile
+{   margin: 5px;
+    padding: 1px;
+    border: 1px solid #ccc;
+    width: 241px;
+}
+
+#icon
+{
+    width: 42px; height: 42px;
+    text-shadow: 2px 2px 5px;
+    transition: transform 1s;
+}
+
+#icon:hover
+{
+    transform: rotateY(360deg);
+}
+
+#ulnav
+{
+    list-style-type: none;
+    margin: 0; padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width: 75%;
+    position: sticky;
+    top: 0;
+}
+
+#linav
+{
+    float: left;
+}
+  
+#nav
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+#nav:hover
+{
+    background-color: #111;
+}
+
+#nav:active
+{
+    background-color: #990A0A;
+    border-style: inset;
+}
