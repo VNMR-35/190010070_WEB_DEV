@@ -1,62 +1,124 @@
 <!doctype HTML>
 <html>
     <head>
+        <title>VNMR</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
-        <title>About Me</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     </head>
 <body>
 
-<h1 style="text-align: center;"><hr> About Me </hr></h1>
+<nav class="nav">
+    <div class="logo">
+        <h4>VNMR</h4>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li class="contact"><a href="#contact"><h5>Contact</h5></a></li>
+    </ul>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</nav>
+<script src="app.js"></script>
 
-<ul id='ulnav'>
-    <li id='linav'><a id='nav' href="#name">Name</a></li>
-    <li id='linav'><a id='nav' href="#education">Education</a></li>
-    <li id='linav'><a id='nav' href="#hobbies">Hobbies</a></li>
-    <li id='linav'><a id='nav' href="#ambitions">Ambitions</a></li>
-    <li id='linav' style="float: right;"><a id='nav' href="#social">Social</a></li>
-</ul>
+<div id='background'>
+<div class='container pt-3 my-3 bg-dark text-white' id='home' style='min-height: 100vh; opacity: 0.9; align-items: center;'>
+    <h3 style="text-shadow: 2px 2px 5px rgb(148, 2, 161); text-align: center; font-weight: bold;">Vinamra Baghel</h3>
+    <figure id='profile'>
+        <img src="photo1.jpg" class="rounded" alt="My picture" style="width:45vw;height:60vw;">
+        <figcaption style="font-size: 20px; text-align: center;">That's Me!</figcaption>
+    </figure>
+</div>
+</div>
 
-<a name='name'>
-<h2><b>Name: </b></h2> <p>Vinamra Baghel (<i>VNMR</i>)</p>
-<figure id='profile'>
-    <img src="IMG_20190804_232826_295.jpg" alt="My picture" style="width:240px;height:320px;">
-    <figcaption>That's Me!</figcaption>
-</figure>
-</a>
-<a name='education'>
-<h2><b>Education: </b></h2> 
-<ul>
-    <li>S.M. Shetty High School (Nursery to 6th grade)</li>
-    <li>Pawar Public School Chandivali (7th to 10th grade)</li>
-    <li>PACE Powai (11th and 12th)</li>
-    <li>IIT Bombay (Undergrad)</li>
-</ul>
-</a>
-<a name='hobbies'>
-<h2><b>Hobbies: </b></h2>
-<ul>
-    <li>Guitar</li>
-    <li>Martial Arts</li>
-    <li>Fitness</li>
-</ul>
-</a>
-<a name='ambitions'>
-<h2><b>Ambitions: </b></h2>
-<ul>
+<div class='container pt-3' id='about'>
+    <h2><b>About Me </b></h2>
+    I am a first year undergraduate student at Indian Institute of Technology Bombay. I am into coding, music, fitness and entrepreneurship. Some of my interests are mentioned below. 
+    <h3><b>Education:</b> </h3>
+    <ul>
+        <li>S.M. Shetty High School (Nursery to 6th grade)</li>
+        <li>Pawar Public School Chandivali (7th to 10th grade)</li>
+        <li>PACE Powai (11th and 12th)</li>
+        <li>IIT Bombay (Undergrad)</li>
+    </ul>
+    <h3><b>Ambitions: </b></h3>
+    <ul>
     <li>To travel the world</li>
     <li>Add to the human society in terms of:
         <ul>
             <li>Value of Nature</li>
             <li>Social Maturity</li>
+            <li>Better Quality of Living</li>
         </ul>
     </li>
-</ul>
-</a>
-<a name='social'>
+    </ul>
+</div>
+
+<div class='container pt-3' id='interests'>
+    <h2><b>My Interests </b></h2>
+    <h3><b>Academic:</b></h3>
+    <ul>
+        <li>Physics!</li>
+        <li>History</li>
+        <li>Technology</li>
+    </ul>
+    <h3><b>Extra-curricular:</b></h3>
+    <ul>
+        <li>Guitar</li>
+        <li>Martial Arts</li>
+        <li>Fitness</li>
+        <li>Photography</li>
+    </ul>
+    <h3><b>Pop Culture:</b></h3>
+    <ul>
+        <li>Star Wars</li>
+        <li>How I Met Your Mother</li>
+        <li>Brooklyn 99</li>
+    </ul>
+</div>
+
+<form
+    class="contact-form" id='contact'
+  action="https://formspree.io/xqkywedr"
+  method="POST"
+>
+<label>
+    Your Full Name:
+    <input type="text" name="fname">
+  </label>
+    <label>
+    Your email:
+    <input type="text" name="_replyto">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+
+  <!-- your other form fields go here -->
+
+  <button type="submit">Send</button>
+</form>
+
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+  <script>
+    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+    formbutton("create", {action: "https://formspree.io/xqkywedr"})
+  </script>
+
+<footer id='social'>
 <h2><b>My Socials: </b></h2> <!--Socials-->
     <a href="https://www.facebook.com/profile.php?id=100010084382135"><img id='icon' src="facebook-new.png" alt="Facebook" style="width:42px;height:42px;"></a>
     <a href="https://www.linkedin.com/in/vinamra-baghel-0b6430192/"><img id='icon' src="linkedin.png" alt="LinkedIn" style="width:42px;height:42px;"></a>
     <a href="https://www.quora.com/profile/Vinamra-Baghel"><img id='icon' src="quora-icon.png" alt="Quora" style="width:42px;height:42px;"></a>
-</a>
+</footer>
 </body>
 </html>
